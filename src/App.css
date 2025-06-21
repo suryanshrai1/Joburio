@@ -1,68 +1,42 @@
-@import "tailwindcss";
-/* App.css */
-
-/* Set a global font and smooth transitions */
-body {
-  font-family: 'Inter', sans-serif;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  background-color: #f0f4f8;
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
 }
 
-/* Enhance buttons globally */
-button {
-  transition: all 0.3s ease;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-/* Apply subtle animation on hover for cards */
-.card-hover:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-/* Apply fade-in animation */
-.fade-in {
-  animation: fadeIn 0.6s ease-in-out;
-}
-
-@keyframes fadeIn {
+@keyframes logo-spin {
   from {
-    opacity: 0;
-    transform: translateY(12px);
+    transform: rotate(0deg);
   }
   to {
-    opacity: 1;
-    transform: translateY(0);
+    transform: rotate(360deg);
   }
 }
 
-/* Make links consistent */
-a {
-  color: #2563eb;
-  text-decoration: none;
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
 }
 
-a:hover {
-  text-decoration: underline;
+.card {
+  padding: 2em;
 }
 
-/* Style inputs and textareas */
-input, textarea {
-  transition: border 0.2s ease, box-shadow 0.2s ease;
-}
-
-input:focus, textarea:focus {
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
-}
-
-/* Optional: Scrollbar customization */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #93c5fd;
-  border-radius: 4px;
+.read-the-docs {
+  color: #888;
 }
