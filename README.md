@@ -2,7 +2,7 @@
 
 **Joburio** is a full-featured, modern job portal connecting job seekers with top companies. Built with React, Vite, and TailwindCSS, it offers a smooth and intuitive user experience for candidates, employers, and administrators alike.
 
-![Joburio Screenshot](public/preview.jpg) 
+![Joburio Screenshot](image-1.png)) 
 
 ---
 
@@ -65,14 +65,7 @@
 
 ## 🗂️ Project Structure
 
-src/
-├── components/ # Reusable UI components
-│ └── ui/ # Button, Card, Avatar, etc.
-├── pages/ # Route-level pages like Index.tsx
-├── lib/ # Utility functions (e.g., cn)
-├── contexts/ # Context providers (DataContext, AuthContext, etc.)
-├── App.tsx # Route definitions and layout
-└── index.tsx # Main React entry point
+src/\n├── components/  # Reusable UI components\n│   └── ui/        # Button, Card, Avatar, etc.\n├── pages/         # Route-level pages like Index.tsx\n├── lib/           # Utility functions (e.g., cn)\n├── contexts/      # Context providers (DataContext, AuthContext, etc.)\n├── App.tsx        # Route definitions and layout\n└── index.tsx      # Main React entry point
 
 
 ---
@@ -106,5 +99,5 @@ MIT © suryanshrai1
 Pull requests and suggestions are welcome! Please open an issue first to discuss any major changes.
 
 ### 👤 Author
-Made with ❤️ by Suryansh Rai
+Made with ❤️ by Suryansh Rai  
 Linkedin- https://www.linkedin.com/in/suryanshrai1/
