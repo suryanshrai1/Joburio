@@ -78,7 +78,7 @@ src/
 
 ├── App.tsx # Route definitions and layout  
 
-└── index.tsx # Main React entry poin
+└── index.tsx # Main React entry point
 
 
 ---

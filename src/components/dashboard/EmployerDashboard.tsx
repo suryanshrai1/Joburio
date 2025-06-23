@@ -254,7 +254,7 @@ const EmployerDashboard = () => {
           <Button className="button-gradient" asChild>
             <Link to="/post-job">
               <Plus className="h-4 w-4 mr-2" />
-              Post New Job
+              Post Job
             </Link>
           </Button>
         </div>

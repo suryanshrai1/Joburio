@@ -28,7 +28,8 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
   const [userType, setUserType] = useState<"jobseeker" | "employer" | "admin">(
-    "jobseeker",
+    (searchParams.get("userType") as "jobseeker" | "employer" | "admin") ||
+      "jobseeker",
   );
 
   const [formData, setFormData] = useState({

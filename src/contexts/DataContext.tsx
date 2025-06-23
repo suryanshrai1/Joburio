@@ -191,6 +191,9 @@ interface DataContextType {
   getJob: (jobId: string) => Job | undefined;
   getJobsByCompany: (companyId: string) => Job[];
   searchJobs: (query: string, filters?: any) => Job[];
+  addJob: (
+    job: Omit<Job, "id" | "postedAt" | "applicationCount" | "viewCount">,
+  ) => Promise<Job>;
   applyToJob: (jobId: string, coverLetter?: string) => Promise<void>;
   withdrawApplication: (applicationId: string) => Promise<void>;
 
@@ -357,6 +360,24 @@ export const DataProvider = ({ children }: DataProviderProps) => {
       });
     },
     [jobs],
+  );
+
+  const addJob = useCallback(
+    async (
+      jobData: Omit<Job, "id" | "postedAt" | "applicationCount" | "viewCount">,
+    ) => {
+      const newJob: Job = {
+        ...jobData,
+        id: `job_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+        postedAt: new Date().toISOString(),
+        applicationCount: 0,
+        viewCount: 0,
+      };
+
+      setJobs((prevJobs) => [newJob, ...prevJobs]);
+      return newJob;
+    },
+    [],
   );
 
   const applyToJob = useCallback(
@@ -635,6 +656,7 @@ export const DataProvider = ({ children }: DataProviderProps) => {
     getJob,
     getJobsByCompany,
     searchJobs,
+    addJob,
     applyToJob,
     withdrawApplication,
     saveJob,

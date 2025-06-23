@@ -69,6 +69,23 @@ const Header = () => {
         <div className="flex items-center space-x-4">
           {isLoggedIn ? (
             <>
+              {/* Post Job button for employers */}
+              {(userType === "employer" || userType === "admin") && (
+                <Button
+                  size="sm"
+                  className="button-gradient hidden sm:flex"
+                  asChild
+                >
+                  <Link to="/post-job">
+                    <Search className="h-4 w-4 mr-2" />
+                    Post Job
+                  </Link>
+                </Button>
+              )}
+            </>
+          ) : null}
+          {isLoggedIn ? (
+            <>
               {/* Notifications */}
               <Button variant="ghost" size="sm" className="hidden sm:flex">
                 <Bell className="h-4 w-4" />
