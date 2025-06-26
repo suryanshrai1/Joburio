@@ -8,7 +8,7 @@
 
 ## 🚀 Live Demo
 
-🌐 Coming sooon...
+https://joburio.vercel.app/
 
 ---
 
